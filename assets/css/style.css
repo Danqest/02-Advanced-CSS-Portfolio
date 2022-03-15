@@ -1,0 +1,125 @@
+:root {
+  --primary: black;
+  --secondary: rgb(0, 58, 82);
+  --text-color: white;
+}
+
+/* Universal selector pre-defining box-sizing, padding, & margin */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+}
+/* body Type selector defining font-sizing & background-color within the body element */
+body {
+  font-size: 16px;
+  /* background-color: #d9dcd6; */
+  background-image: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+/* header Type selector defining padding, fonts, background-color, and text color within the header element*/
+header {
+  padding: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: var(--text-color);
+}
+/* Type selector defining display positioning & font-size within the header element of h1 */
+h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+
+/* Type selector defining padding, right margin, float location, fonts, and font size for the buttons/links in the header */
+header ul {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+/* Type selector defining display positioning and left margin for the text itself in the buttons/links in the header */
+header li {
+  display: inline-block;
+  margin-left: 25px;
+}
+/* Type selector defining text color & lack of text decoration of the individual links/buttons in the header */
+a {
+  text-decoration: none;
+}
+/* Class selector for the hero image defining the dimensions, bottom margin, image file location, and positioning */
+.hero-image {
+  height: 800px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/ai-hero-img.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Class selector defining left float and right margin for images to be on the left */
+.float-left {
+  float: left;
+  margin-right: 25px;
+}
+
+.about-me {
+  display: inline-block;
+}
+
+main {
+  /* Turns this element into a flexbox */
+  display: flex;
+  /* Forces elements to the next line if they don't fit */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h3 {
+  display: inline-block;
+  font-size: 25px;
+  margin-left: 30%;
+}
+
+.card {
+  /* A flex-basis of 200px sets the starting width */
+  /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
+  /* flex: 1 0 200px; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--secondary);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Type selector defining the padding, font, and text aligment for content in the footer element */
+footer {
+  padding: 30px;
+  clear: both;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+/* Type selector defining font size for content in the h4 element within the footer */
+h4 {
+  font-size: 20px;
+}
+footer ul {
+  padding-top: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+footer li {
+  display: inline-block;
+}
