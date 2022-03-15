@@ -1,36 +1,38 @@
 :root {
   --primary: black;
   --secondary: rgb(0, 58, 82);
+  --tertiary: teal;
   --text-color: white;
 }
 
-/* Universal selector pre-defining box-sizing, padding, & margin */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   color: var(--text-color);
 }
-/* body Type selector defining font-sizing & background-color within the body element */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
-  /* background-color: #d9dcd6; */
   background-image: linear-gradient(135deg, var(--primary), var(--secondary));
 }
-/* header Type selector defining padding, fonts, background-color, and text color within the header element*/
+
 header {
   padding: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   color: var(--text-color);
 }
-/* Type selector defining display positioning & font-size within the header element of h1 */
+
 h1 {
   display: inline-block;
   font-size: 48px;
 }
 
-/* Type selector defining padding, right margin, float location, fonts, and font size for the buttons/links in the header */
 header ul {
   padding-top: 15px;
   margin-right: 20px;
@@ -38,56 +40,92 @@ header ul {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
 }
-/* Type selector defining display positioning and left margin for the text itself in the buttons/links in the header */
+
 header li {
   display: inline-block;
   margin-left: 25px;
 }
-/* Type selector defining text color & lack of text decoration of the individual links/buttons in the header */
+
 a {
   text-decoration: none;
 }
-/* Class selector for the hero image defining the dimensions, bottom margin, image file location, and positioning */
+
 .hero-image {
   height: 800px;
-  width: 100%;
-  margin-bottom: 25px;
+  width: 100vw;
+  display: flex;
   background-image: url("../images/ai-hero-img.jpg");
   background-size: cover;
-  background-position: center;
+  position: relative;
+  display: flex;
 }
 
-/* Class selector defining left float and right margin for images to be on the left */
 .float-left {
   float: left;
   margin-right: 25px;
 }
 
-.about-me {
-  display: inline-block;
+article {
+  margin-top: 0.5%;
+  display: flex;
 }
 
-main {
-  /* Turns this element into a flexbox */
-  display: flex;
-  /* Forces elements to the next line if they don't fit */
-  flex-wrap: wrap;
-  justify-content: center;
+h2 {
+  font-size: 50px;
+  float: left;
+  text-align: right;
+}
+
+.about-me {
+  padding-left: 10%;
+  margin-left: 1%;
+  margin-right: 20%;
+  margin-top: 3%;
+}
+
+.about-me img {
+  margin-left: 1%;
+  padding-left: 1%;
+  border-left-style: solid;
 }
 
 h3 {
-  display: inline-block;
-  font-size: 25px;
-  margin-left: 30%;
+  font-size: 50px;
+  float: left;
+  text-align: right;
+  padding-right: 3%;
+}
+
+.projects-portfolio {
+  margin-left: 2.1%;
+  margin-top: 3%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects-portfolio section {
+  border-left-style: solid;
+  padding-left: 1%;
+}
+
+.projects-portfolio .card :hover {
+  opacity: 0.5;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  margin-left: 50%;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .card {
-  /* A flex-basis of 200px sets the starting width */
-  /* A flex-grow value of 1 allows the elements to evenly grow to fill the remaining space */
-  /* flex: 1 0 200px; */
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   padding: 10px;
+  margin: 5px;
   border-style: solid;
   border-width: 1px;
   position: relative;
@@ -96,30 +134,46 @@ h3 {
 /* Bottom right text */
 .text-block {
   position: absolute;
-  bottom: 10px;
+  text-align: center;
+  bottom: 14px;
   right: 10px;
-  background-color: var(--secondary);
+  background-color: var(--tertiary);
   padding-left: 10px;
   padding-right: 10px;
 }
 
 /* Type selector defining the padding, font, and text aligment for content in the footer element */
-footer {
+/* footer {
   padding: 30px;
   clear: both;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   text-align: center;
-}
+} */
 /* Type selector defining font size for content in the h4 element within the footer */
 h4 {
   font-size: 20px;
 }
-footer ul {
+
+.contact {
+  margin-left: 9.35%;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+.contact section {
+  border-left-style: solid;
+  padding-left: 25%;
+  margin-left: 1%;
+  align: right;
+}
+
+article section ul {
   padding-top: 15px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 20px;
 }
-footer li {
+article section li {
   display: inline-block;
+  margin-left: 25px;
 }
